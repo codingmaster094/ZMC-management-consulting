@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+
+  h4 {
+    @apply text-h4;
+  }
+
+  html {
+    @apply scroll-smooth break-words;
+  }
+
+  body {
+    @apply sm:text-p font-medium font-Helvetica text-text bg-primary-light;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    @apply bg-transparent border border-black opacity-100;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet-active {
+    @apply bg-primary border-secondary;
+  }
+
+  nav .link.active,
+  nav .link:hover {
+    @apply text-primary transition-all duration-[0.3s] ease-[ease] pb-[3px] border-b-[#A58C65] border-b border-solid;
+  }
+
+  /* .hero {
+    @apply bg-[url(/images/hero-bg-mobile.webp)] sm:bg-[url(/images/hero-bg.webp)] bg-cover bg-center;
+  } */
+
+  .list li,
+  .list-2 li {
+    @apply ml-6 pl-4;
+  }
+
+  .list-dot>li {
+    @apply ml-4 pl-2;
+  }
+
+  .list {
+    @apply list-image-[url(/images/list-img.svg)];
+  }
+
+  .list-2 {
+    @apply list-image-[url(/images/list-img-2.svg)];
+  }
+
+  .list-tick {
+    @apply list-image-[url(/images/list-tick.svg)] list-inside;
+  }
+
+  .list-dot {
+    @apply list-image-[url(/images/list-dot.svg)];
+  }
+
+  .swiper.reviewsSwiper .swiper-button-prev::after,
+  .swiper.reviewsSwiper .swiper-button-next::after {
+    @apply hidden
+  }
+
+  .swiper.reviewsSwiper {
+    @apply static
+  }
+
+  .swiper.reviewsSwiper .swiper-wrapper {
+    @apply items-center
+  }
+
+  .swiper.reviewsSwiper .swiper-button-prev, .swiper.reviewsSwiper .swiper-button-next {
+    @apply hidden 4xl:grid size-[60px] bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-full place-items-center absolute left-20
+  }
+
+  .swiper.reviewsSwiper .swiper-button-next {
+    @apply right-20 left-auto
+  }
+
+  .swiper.reviewsSwiper .swiper-button-prev::before,
+  .swiper.reviewsSwiper .swiper-button-next::before {
+    @apply content-[""] size-[22px] bg-[url(/images/left-arrow.svg)] hover:invert
+  }
+
+  .swiper.reviewsSwiper .swiper-button-next::before {
+    @apply bg-[url(/images/right-arrow.svg)]
+  }
+
+  .cookie-main {
+    @apply fixed w-full h-screen z-[999] left-0 top-0 bg-black bg-opacity-40 ;
+  }
+
+  .cookie {
+    @apply fixed z-[9999999] px-[15px] py-[30px] bottom-0 inset-x-0 bg-white;
+  }
+
+  .cookie-wrapper {
+    @apply flex flex-col lg:flex-row items-start gap-[30px];
+  }
+
+  .cookie-btn {
+    @apply flex gap-2 flex-wrap lg:flex-col shrink-0;
+  }
+
+  .cookie_a:hover {
+    @apply text-gray-500;
+  }
+
+  .cookie-text p {
+    @apply text-gray-500;
+  }
+
+  .cookie-btn .btn {
+    @apply leading-6 tracking-[0.03em] text-white bg-primary cursor-pointer border transition-all px-6 py-2.5 hover:border-primary hover:bg-transparent hover:text-primary;
+  }
+
+}
