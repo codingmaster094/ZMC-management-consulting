@@ -4,7 +4,7 @@ import React from "react";
 const Startseite = () => {
   return (
     <>
-    <section className="sec bg-[url(/images/hero-bg-mobile.webp)] sm:bg-[url(/images/hero-bg.webp)] py-20 md:py-24 lg:py-[167px] text-white">
+    <section className="sec bg-[url(/images/hero-bg-mobile.webp)] sm:bg-[url(/images/hero-bg.webp)] py-20 md:py-24 lg:py-[167px] text-white" id="Startseite">
         <div className="container">
           <div className="sm:w-8/12 lg:w-6/12">
             <h1>Z management consulting (ZMC) in Stuttgart</h1>

@@ -3,12 +3,30 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/images/logo.svg";
 import { useEffect, useState, useRef } from "react";
-import Startseite from "./Startseite";
+import Lenis from "@studio-freight/lenis";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/"); // State to track the active link
+  const lenisRef = useRef(null);
+
+  useEffect(() => {
+    const scroller = new Lenis();
+    let rafState;
+
+    function raf(time) {
+      scroller.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    rafState = requestAnimationFrame(raf);
+    lenisRef.current = scroller;
+
+    return () => {
+      cancelAnimationFrame(rafState);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,11 +86,23 @@ const Header = () => {
   const SidebarFun = () => {
     setIsOpen(false);
   };
+
+  const handleSubmenuClick = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(targetId);
+console.log('targetElement', targetElement)
+    if (targetElement) {
+      lenisRef.current.scrollTo(targetElement, { duration: 1.5 });
+    } else {
+      console.warn(`Target section with id #${targetId} not found.`);
+    }
+  };
+
   return (
     <header className={`py-4 bg-white z-50 w-full top-0 left-0 sticky`}>
       <div className="container">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" aria-label="Home" className="inline-block">
+          <Link href="/" aria-label="Home" className="inline-block cursor-pointer">
             <Image
               src={Logo}
               alt="ZMC Management Consulting"
@@ -85,9 +115,10 @@ const Header = () => {
             <ul className="flex gap-12">
               <li>
                 <Link
-                  href="/"
+                  href="#Startseite"
                   aria-label="Startseite"
                   className={`link ${activeLink === "/" ? "active" : ""}`}
+                  onClick={(e) => handleSubmenuClick(e , "#Startseite")}
                 >
                   Startseite
                 </Link>
@@ -99,6 +130,7 @@ const Header = () => {
                   className={`link ${
                     activeLink === "#services" ? "active" : ""
                   }`}
+                  onClick={(e) => handleSubmenuClick(e , "#services")}
                 >
                   Dienstleistungen
                 </Link>
@@ -108,6 +140,7 @@ const Header = () => {
                   href="#about"
                   aria-label="Über uns"
                   className={`link ${activeLink === "#about" ? "active" : ""}`}
+                  onClick={(e) => handleSubmenuClick(e , "#about")}
                 >
                   Über uns
                 </Link>
@@ -119,6 +152,7 @@ const Header = () => {
                   className={`link ${
                     activeLink === "#downloads" ? "active" : ""
                   }`}
+                  onClick={(e) => handleSubmenuClick(e , "#downloads")}
                 >
                   Herunterladen
                 </Link>
@@ -131,6 +165,7 @@ const Header = () => {
               href="#contact"
               aria-label="Contact"
               className="bg-primary text-white flex gap-4 p-2 sm:py-2 sm:px-6 shadow-btn_shadow hover:bg-white hover:text-primary transition-all duration-300"
+              onClick={(e) => handleSubmenuClick(e ,"#contact")}
             >
               <span className="hidden xl:block">Kontakt</span>
               <svg
