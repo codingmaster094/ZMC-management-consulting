@@ -154,7 +154,7 @@ console.log('targetElement', targetElement)
                   }`}
                   onClick={(e) => handleSubmenuClick(e , "#downloads")}
                 >
-                  Herunterladen
+                  Akteulles
                 </Link>
               </li>
             </ul>
@@ -164,7 +164,7 @@ console.log('targetElement', targetElement)
             <Link
               href="#contact"
               aria-label="Contact"
-              className="bg-primary text-white flex gap-4 p-2 sm:py-2 sm:px-6 shadow-btn_shadow hover:bg-white hover:text-primary transition-all duration-300"
+              className={`link ${activeLink === "#contact" ? "active" : ""} bg-primary text-white flex gap-4 p-2 sm:py-2 sm:px-6 shadow-btn_shadow hover:bg-white hover:text-primary transition-all duration-300`}
               onClick={(e) => handleSubmenuClick(e ,"#contact")}
             >
               <span className="hidden xl:block">Kontakt</span>
@@ -304,13 +304,13 @@ console.log('targetElement', targetElement)
             <li>
               <Link
                 href="#downloads"
-                aria-label="Herunterladen"
+                aria-label="Akteulles"
                 className={`link ${
                   activeLink === "#downloads" ? "active" : ""
                 }`}
                 onClick={SidebarFun}
               >
-                Herunterladen
+                Akteulles
               </Link>
             </li>
           </ul>

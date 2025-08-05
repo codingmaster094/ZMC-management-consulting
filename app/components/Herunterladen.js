@@ -4,6 +4,16 @@ import Link from "next/link";
 const Herunterladen = () => {
   const HerunterladenData = [
     {
+      title: "OPs in Ellwanger Klinikgesichert",
+      href: "/Presseartikel-über-ZMC-OPs-in-Ellwanger-Klinikgesichert.pdf",
+      download: "Ellwanger Klinikgesichert PDF"
+    },
+    {
+      title: "Investoren übernehmen OP-Betrieb in Ellwangen", 
+      href: "/nvestoren-übernehmen-OP-Betrieb-in-Ellwangen.pdf",
+      download: "Investoren übernehmen PDF"
+    },
+    {
       title: "Artikel zum Thema Unternehmensfinanzierung Magazin Maturus aktuell",
       href: "/MaturusMagazinHerbstWinter2023.pdf",
       download: "PDF 1"
@@ -23,7 +33,7 @@ const Herunterladen = () => {
     <section className="sec py-24 lg:py-28 bg-white" id="downloads">
       <div className="container">
         <h2 className="title text-center mb-20 text-primary relative after:absolute after:left-2/4 after:-translate-x-2/4 after:-bottom-4 after:w-40 after:h-[5px] after:bg-secondary">
-          Herunterladen
+          Akteulles
         </h2>
         <div className="flex flex-col gap-12 md:flex-row flex-wrap">
           {HerunterladenData.map((item, index) => (
