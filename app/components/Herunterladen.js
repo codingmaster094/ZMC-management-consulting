@@ -9,7 +9,7 @@ const Herunterladen = () => {
       download: "Ellwanger Klinikgesichert PDF"
     },
     {
-      title: "Investoren übernehmen OP-Betrieb in Ellwangen", 
+      title: "Investoren übernehmen OP-Betrieb in Ellwangen",
       href: "/nvestoren-übernehmen-OP-Betrieb-in-Ellwangen.pdf",
       download: "Investoren übernehmen PDF"
     },
@@ -19,13 +19,13 @@ const Herunterladen = () => {
       download: "PDF 1"
     },
     {
-      title: "Leistungs-Portfolio Restrukturierung Automotive; Kooperation KL-Gates, TAS und ZMC", 
+      title: "Leistungs-Portfolio Restrukturierung Automotive; Kooperation KL-Gates, TAS und ZMC ",
       href: "/pdf2.pdf",
       download: "PDF 2"
     },
     {
       title: "Leistungs-Portfolio Restrukturierung Automotive; Kooperation KL-Gates, TAS und ZMC",
-      href: "/pdf3.pdf", 
+      href: "/pdf3.pdf",
       download: "PDF 3"
     }
   ]
@@ -37,45 +37,46 @@ const Herunterladen = () => {
         </h2>
         <div className="flex flex-col gap-12 md:flex-row flex-wrap">
           {HerunterladenData.map((item, index) => (
-            <div key={index} className="space-y-4 w-full md:w-[calc(50%-24px)]">
-              <div className="border p-4 sm:p-8 border-secondary space-y-6">
+            <div key={index} className="w-full md:w-[calc(50%-24px)]">
+              <div className="flex flex-col h-full border p-4 sm:p-8 border-secondary justify-between">
                 <h3 className="text-primary break-words">
                   {item.title}
                 </h3>
+                <Link
+                  aria-label=""
+                  target="_blank"
+                  href={item.href}
+                  download={item.download}
+                  className="flex items-center gap-4 text-primary mt-6"
+                >
+                  <span>HERUNTERLADEN</span>
+                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.99998 14.321V2.6543"
+                      stroke="#A58C65"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M17.5 14.3208C17.5 16.1616 16.0075 17.6541 14.1667 17.6541H5.83333C3.9925 17.6541 2.5 16.1616 2.5 14.3208"
+                      stroke="#A58C65"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M14.1667 10.1543L9.99919 14.3218L5.83252 10.1543"
+                      stroke="#A58C65"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
               </div>
-              <Link
-                aria-label=""
-                target="_blank"
-                href={item.href}
-                download={item.download}
-                className="flex items-center gap-4 text-primary"
-              >
-                <span>HERUNTERLADEN</span>
-                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.99998 14.321V2.6543"
-                    stroke="#A58C65"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M17.5 14.3208C17.5 16.1616 16.0075 17.6541 14.1667 17.6541H5.83333C3.9925 17.6541 2.5 16.1616 2.5 14.3208"
-                    stroke="#A58C65"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M14.1667 10.1543L9.99919 14.3218L5.83252 10.1543"
-                    stroke="#A58C65"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
             </div>
+
           ))}
         </div>
       </div>
