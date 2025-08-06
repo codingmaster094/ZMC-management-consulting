@@ -4,12 +4,12 @@ import Link from "next/link";
 const Herunterladen = () => {
   const HerunterladenData = [
     {
-      title: "OPs in Ellwanger Klinikgesichert",
+      title: "Presseartikel über ZMC: OPs in Ellwanger Klinik gesichert",
       href: "/Presseartikel-über-ZMC-OPs-in-Ellwanger-Klinikgesichert.pdf",
       download: "Ellwanger Klinikgesichert PDF"
     },
     {
-      title: "Investoren übernehmen OP-Betrieb in Ellwangen",
+      title: "Presseartikel über ZMC: Investoren übernehmen OP-Betrieb in Ellwangen",
       href: "/nvestoren-übernehmen-OP-Betrieb-in-Ellwangen.pdf",
       download: "Investoren übernehmen PDF"
     },
