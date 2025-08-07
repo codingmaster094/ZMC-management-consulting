@@ -10,6 +10,9 @@ export const metadata = {
   title: "ZMZ- Z management consulting",
   description: "ZMZ- Z management consulting",
   robots: "index, follow",
+  other: {
+    "google-site-verification": "SErok5b3yj9S9GK9eW-vkHEJql5R1yPR1VuHfstHR18",
+  },
 };
 
 export default function RootLayout({ children }) {
