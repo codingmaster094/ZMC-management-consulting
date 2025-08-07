@@ -19,7 +19,7 @@ const Herunterladen = () => {
       download: "PDF 1"
     },
     {
-      title: "Leistungs-Portfolio Restrukturierung Automotive; Kooperation KL-Gates, TAS und ZMC ",
+      title: "Leistungs-Portfolio Restrukturierung Automotive; Kooperation KL-Gates, TAS und ZMC",
       href: "/pdf2.pdf",
       download: "PDF 2"
     },
