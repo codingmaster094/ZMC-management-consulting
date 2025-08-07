@@ -9,7 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata = {
   title: "ZMZ- Z management consulting",
   description: "ZMZ- Z management consulting",
-  robots: "index, follow",
+  robots: "noindex, nofollow",
   other: {
     "google-site-verification": "SErok5b3yj9S9GK9eW-vkHEJql5R1yPR1VuHfstHR18",
   },
